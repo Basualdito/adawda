@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentación y Presentación — Portfolio Braian Basualdo</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="docs.css">
+</head>
+<body>
+  <header class="docs-header">
+    <div class="container">
+      <div class="docs-topbar">
+        <span class="docs-kicker">6.º Año Informática • Instituto Privado Mixto San Agustín</span>
+        <a href="../index.html" class="back-btn">← Abrir Portfolio Principal</a>
+      </div>
+      <h1>Documentación Técnica y Presentación</h1>
+      <p class="docs-lead">
+        Guía completa del portfolio de <strong>Braian Nahuel Basualdo</strong>: estructura de archivos, sistema visual azulado con amarillo tenue, explicación técnica del código, bitácora IA y publicación en GitHub Pages.
+      </p>
+    </div>
+  </header>
+
+  <nav class="tabs-bar" aria-label="Secciones de la documentación">
+    <div class="container tabs-inner" role="tablist">
+      <button type="button" class="tab-btn active" role="tab" aria-selected="true" data-tab="resumen">1. Resumen y Estructura</button>
+      <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="diseno">2. Diseño y Animaciones</button>
+      <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="bitacora">3. Bitácora IA y Defensa Oral</button>
+      <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="github">4. Publicar en GitHub Pages</button>
+    </div>
+  </nav>
+
+  <main class="container docs-main">
+    <!-- TAB 1 -->
+    <section id="tab-resumen" class="tab-panel active" role="tabpanel">
+      <div class="card card-soft">
+        <h2>Documentos Markdown disponibles en el proyecto</h2>
+        <p>Toda la documentación también se encuentra guardada en formato <code>.md</code> para consultar desde GitHub o cualquier editor:</p>
+        <div class="md-links">
+          <a class="md-chip" href="documentacion.md" target="_blank" rel="noopener">docs/documentacion.md</a>
+          <a class="md-chip" href="guia-github-pages.md" target="_blank" rel="noopener">docs/guia-github-pages.md</a>
+          <a class="md-chip" href="bitacora-ia.md" target="_blank" rel="noopener">docs/bitacora-ia.md</a>
+          <a class="md-chip" href="../bitacora_ia.md" target="_blank" rel="noopener">bitacora_ia.md (raíz)</a>
+          <a class="md-chip" href="../README.md" target="_blank" rel="noopener">README.md (raíz)</a>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Organización de carpetas</h3>
+          <pre class="code-block">BASUALDO/
+├── index.html
+├── README.md
+├── bitacora_ia.md
+├── css/
+│   └── estilos.css
+├── js/
+│   └── script.js
+├── assets/
+│   ├── docs/
+│   │   └── cv-braian-basualdo.pdf
+│   └── img/
+│       ├── favicon.svg
+│       ├── proyecto-seguidor-linea.svg
+│       ├── proyecto-web.svg
+│       ├── proyecto-robots-basicos.svg
+│       └── proyecto-techcamp.svg
+└── docs/
+    ├── index.html
+    ├── docs.css
+    ├── documentacion.md
+    ├── guia-github-pages.md
+    └── bitacora-ia.md</pre>
+        </div>
+
+        <div class="card">
+          <h3>Contenido adaptado al perfil real (CV + Proyectos)</h3>
+          <ul>
+            <li><strong>Hero con Ficha Técnica (sin foto):</strong> Presentación directa con monograma <code>BB</code>, datos escolares, edad, ubicación y disponibilidad.</li>
+            <li><strong>Sobre mí (Bento Grid):</strong> Perfil, objetivo laboral, armado y mantenimiento de PC/notebooks, entrenamiento físico (1–3 años) y horarios.</li>
+            <li><strong>Proyectos:</strong> Autitos seguidores de línea, desarrollo de páginas web (HTML y CSS), robots básicos y app diseñada en Tech Camp UCC.</li>
+            <li><strong>Competencias y Logros:</strong> Copa Robótica 2026 (Semifinales), Iron Bot Córdoba, Tech Camp 2026 (UCC) y Cuadro de Honor.</li>
+            <li><strong>Contacto directo del CV:</strong> Correo (<code>brabasualdo4@gmail.com</code>), teléfono (<code>3517310050</code>) y disponibilidad horaria.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Etiquetas semánticas HTML5 utilizadas en <code>index.html</code></h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Etiqueta</th>
+                <th>Función en el Portfolio</th>
+                <th>Detalle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>&lt;header&gt;</code> y <code>&lt;nav&gt;</code></td>
+                <td>Encabezado fijo con marca <code>BB</code> y menú interno</td>
+                <td>Enlaces a <code>#inicio</code>, <code>#sobre-mi</code>, <code>#proyectos</code>, <code>#competencias</code>, <code>#habilidades</code> y <code>#contacto</code></td>
+              </tr>
+              <tr>
+                <td><code>&lt;main&gt;</code> y <code>&lt;aside&gt;</code></td>
+                <td>Contenido principal y ficha técnica lateral</td>
+                <td>Organiza la lectura y resalta los datos clave sin requerir foto</td>
+              </tr>
+              <tr>
+                <td><code>&lt;section&gt;</code></td>
+                <td>Bloques temáticos con identificador único</td>
+                <td>Cada sección coincide exactamente con los enlaces del menú superior</td>
+              </tr>
+              <tr>
+                <td><code>&lt;article&gt;</code></td>
+                <td>Tarjetas independientes de proyectos y logros</td>
+                <td>Cada proyecto incluye Desafío, Implementación, Rol, Herramientas, Evidencia y Aprendizaje</td>
+              </tr>
+              <tr>
+                <td><code>&lt;footer&gt;</code></td>
+                <td>Cierre del sitio</td>
+                <td>Año 2026, autoría de Braian Nahuel Basualdo y enlace para volver arriba</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 2 -->
+    <section id="tab-diseno" class="tab-panel" role="tabpanel">
+      <div class="card">
+        <h2>Paleta de Colores: Azul Profundo y Cobalto con Amarillo Tenue</h2>
+        <p>Todas las tonalidades están centralizadas en variables <code>:root</code> dentro de <code>css/estilos.css</code> garantizando contraste AA/AAA.</p>
+        <div class="grid-3">
+          <div class="swatch">
+            <div class="swatch-color" style="background: linear-gradient(135deg, #0b192c 0%, #132a4a 55%, #1d4ed8 100%);"></div>
+            <div class="swatch-info">
+              <strong>Degradado Azul Principal</strong>
+              <span>#0b192c → #132a4a → #1d4ed8</span>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background: linear-gradient(180deg, #eff6ff 0%, #fefce8 100%); border-bottom: 1px solid #dbeafe;"></div>
+            <div class="swatch-info">
+              <strong>Fondo Hero Azul / Amarillo Tenue</strong>
+              <span>#eff6ff → #fefce8</span>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background: #fef9c3; border-bottom: 1px solid #fef08a;"></div>
+            <div class="swatch-info">
+              <strong>Amarillo Tenue de Acento</strong>
+              <span>--yellow-100 (#fef9c3) / texto #713f12</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Animaciones implementadas (GPU 60 fps)</h3>
+          <ul>
+            <li><strong>Entrada del Hero:</strong> <code>@keyframes heroFadeUp</code> y <code>heroCardIn</code> con variable <code>--hero-delay</code>.</li>
+            <li><strong>Bloques al scrollear:</strong> <code>IntersectionObserver</code> detecta cada <code>.reveal-block</code> y agrega <code>.is-visible</code>.</li>
+            <li><strong>Barra superior de progreso:</strong> Escala horizontal (<code>transform: scaleX</code>) sincronizada con <code>requestAnimationFrame</code>.</li>
+            <li><strong>Accesibilidad:</strong> Respeta <code>prefers-reduced-motion: reduce</code> para quienes prefieren menor movimiento.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Lógica reutilizable de copiado en <code>js/script.js</code></h3>
+          <pre class="code-block">copyButtons.forEach((btn) =&gt; {
+  btn.addEventListener("click", async () =&gt; {
+    const targetEl = document.getElementById(btn.dataset.copyTarget);
+    const value = targetEl.textContent.trim();
+    await copyText(value);
+    showToast(btn.dataset.copyLabel);
+  });
+});</pre>
+          <p style="margin-top: 0.75rem;">
+            Con un solo bloque de código y atributos <code>data-copy-target</code> funciona tanto para copiar el correo como el teléfono.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 3 -->
+    <section id="tab-bitacora" class="tab-panel" role="tabpanel">
+      <div class="card card-soft">
+        <h2>Registro de Uso de IA (Resumen de <code>bitacora_ia.md</code>)</h2>
+        <div class="grid-2" style="margin-top: 1rem; margin-bottom: 0;">
+          <div class="card" style="margin-bottom: 0;">
+            <h3>Consulta 1 — Estructura HTML y CV</h3>
+            <p><strong>Objetivo:</strong> Integrar los datos del CV real, competencias (Copa Robótica, Iron Bot, Tech Camp UCC) y proyectos técnicos en una estructura distinta (ficha técnica lateral + bento grid).</p>
+            <p><strong>Decisión propia:</strong> Aclarar que el entrenamiento físico es experiencia práctica sin certificación formal y crear diagramas SVG propios.</p>
+          </div>
+          <div class="card" style="margin-bottom: 0;">
+            <h3>Consulta 2 — Paleta Azul/Amarillo Tenue y JS</h3>
+            <p><strong>Objetivo:</strong> Implementar tokens CSS en tonos azules con amarillo tenue, animaciones GPU y copiado al portapapeles de correo y teléfono.</p>
+            <p><strong>Decisión propia:</strong> Usar JavaScript puro sin librerías externas para mantener el código claro y fácil de defender oralmente.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Guía rápida para explicar el código al docente</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Si te preguntan...</th>
+                <th>Qué responder y dónde mostrarlo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>¿Dónde están los colores azules y el amarillo tenue?</td>
+                <td>En <code>css/estilos.css</code> dentro de <code>:root</code> (<code>--blue-950</code> a <code>--blue-50</code> y <code>--yellow-50</code> a <code>--yellow-300</code>).</td>
+              </tr>
+              <tr>
+                <td>¿Cómo funcionan los filtros de proyectos?</td>
+                <td>En <code>js/script.js</code>: cada botón tiene <code>data-filter</code> y cada tarjeta <code>data-category</code>; al hacer clic se alterna la clase <code>.is-hidden</code>.</td>
+              </tr>
+              <tr>
+                <td>¿Cómo hiciste el modal de evidencias?</td>
+                <td>En <code>index.html</code> (<code>#evidence-modal</code> con <code>role="dialog"</code>) y <code>js/script.js</code>, cerrando con botón <code>✕</code>, clic afuera o tecla <code>Escape</code>.</td>
+              </tr>
+              <tr>
+                <td>¿Por qué las imágenes son archivos <code>.svg</code>?</td>
+                <td>Porque son gráficos vectoriales livianos que no pierden nitidez al ampliarse en el modal y no dependen de servidores externos.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 4 -->
+    <section id="tab-github" class="tab-panel" role="tabpanel">
+      <div class="grid-2">
+        <div class="card">
+          <h2>Pasos para publicar en GitHub Pages</h2>
+          <ol>
+            <li>Creá un repositorio público llamado exactamente <code>tuusuario.github.io</code>.</li>
+            <li>Subí el contenido de la carpeta manteniendo <code>index.html</code> en la raíz junto a <code>css/</code>, <code>js/</code>, <code>assets/</code>, <code>docs/</code>, <code>README.md</code> y <code>bitacora_ia.md</code>.</li>
+            <li>Abrí <strong>Settings → Pages</strong> en GitHub.</li>
+            <li>En <strong>Source</strong> elegí <em>Deploy from a branch</em>, seleccioná <code>main</code> y <code>/(root)</code>, y tocá <strong>Save</strong>.</li>
+            <li>Esperá unos minutos y verificá la URL pública <code>https://tuusuario.github.io</code>.</li>
+          </ol>
+        </div>
+
+        <div class="card">
+          <h2>Checklist Interactivo de Entrega</h2>
+          <span class="progress-pill" id="checklist-status">0 de 7 completados</span>
+          <ul class="checklist" id="delivery-checklist">
+            <li><label><input type="checkbox" data-check="0"> <span><code>index.html</code> ubicado en la raíz del repositorio</span></label></li>
+            <li><label><input type="checkbox" data-check="1"> <span>Menú interno funciona y coincide con cada <code>id</code></span></label></li>
+            <li><label><input type="checkbox" data-check="2"> <span>Las 5 imágenes SVG (favicon + 4 proyectos) cargan sin errores</span></label></li>
+            <li><label><input type="checkbox" data-check="3"> <span>Probado en celular y escritorio sin desbordes horizontales</span></label></li>
+            <li><label><input type="checkbox" data-check="4"> <span>Botones de copiar correo y teléfono probados</span></label></li>
+            <li><label><input type="checkbox" data-check="5"> <span><code>bitacora_ia.md</code> completa y revisada</span></label></li>
+            <li><label><input type="checkbox" data-check="6"> <span>GitHub Pages activado en rama <code>main</code> / <code>(root)</code></span></label></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="docs-footer">
+    <div class="container">
+      Documentación del Portfolio — Braian Nahuel Basualdo • 6.º Año Informática • 2026
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const tabButtons = Array.from(document.querySelectorAll(".tab-btn"));
+      const panels = {
+        resumen: document.getElementById("tab-resumen"),
+        diseno: document.getElementById("tab-diseno"),
+        bitacora: document.getElementById("tab-bitacora"),
+        github: document.getElementById("tab-github")
+      };
+
+      tabButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const target = btn.dataset.tab;
+          tabButtons.forEach((b) => {
+            b.classList.remove("active");
+            b.setAttribute("aria-selected", "false");
+          });
+          btn.classList.add("active");
+          btn.setAttribute("aria-selected", "true");
+
+          Object.entries(panels).forEach(([key, panel]) => {
+            if (panel) panel.classList.toggle("active", key === target);
+          });
+        });
+      });
+
+      const checkboxes = Array.from(document.querySelectorAll('#delivery-checklist input[type="checkbox"]'));
+      const statusPill = document.getElementById("checklist-status");
+      const storageKey = "basualdo-portfolio-checklist-v1";
+
+      function saveAndRenderChecklist() {
+        const state = checkboxes.map((cb) => cb.checked);
+        try {
+          localStorage.setItem(storageKey, JSON.stringify(state));
+        } catch (_e) {}
+        const done = state.filter(Boolean).length;
+        if (statusPill) {
+          statusPill.textContent = `${done} de ${checkboxes.length} completados`;
+        }
+      }
+
+      try {
+        const saved = JSON.parse(localStorage.getItem(storageKey) || "[]");
+        checkboxes.forEach((cb, index) => {
+          cb.checked = Boolean(saved[index]);
+        });
+      } catch (_e) {}
+
+      checkboxes.forEach((cb) => cb.addEventListener("change", saveAndRenderChecklist));
+      saveAndRenderChecklist();
+    })();
+  </script>
+</body>
+</html>
